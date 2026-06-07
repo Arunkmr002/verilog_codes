@@ -1,0 +1,10 @@
+module decoder2to4 (
+input [1:0]a,
+output reg [3:0]y);
+always@(*) begin
+y[0]=~a[0]&~a[1];
+y[1]=a[0]&~a[1];
+y[2]=~a[0]&a[1];
+y[3]=a[0]&a[1];
+end
+endmodule
